@@ -6,7 +6,8 @@ on:
       - master
 
 jobs:
-  Terraform:
+  
+  Terraform-Setup:
     name: Terraform Apply
     runs-on: ubuntu-latest
     steps:
@@ -25,6 +26,7 @@ jobs:
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+  Terraform-Validation:  
     - name: Terraform Validate
       run: terraform validate 
 
@@ -36,6 +38,7 @@ jobs:
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+  Terraform-Apply: 
     - name: Terraform Apply
       run: terraform apply -auto-approve
       env:
