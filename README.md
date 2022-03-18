@@ -1,7 +1,7 @@
 # S3 Terraform
 [![Deploy S3 AWS](https://github.com/Vis-Rodrigues/fiap-hmv-s3_terraform/actions/workflows/actions.yml/badge.svg)](https://github.com/Vis-Rodrigues/fiap-hmv-s3_terraform/actions/workflows/actions.yml)
 
-Provisionar na AWS um API Gateway para expor as rotas dos serviços
+Provisionar na AWS um API Gateway para expor as rotas dos serviços do Challenge do HMV.
 
 ## Como executar
 
