@@ -35,7 +35,7 @@ data "aws_iam_policy_document" "react_app_s3_policy" {
 
     principals {
       type        = "AWS"
-      identifiers = [aws_cloudfront_origin_access_identity.oai.iam_arn]
+      identifiers = [var.cloudfront_oai_arn]
     }
   }
 }
