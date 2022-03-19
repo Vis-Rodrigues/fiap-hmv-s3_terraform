@@ -6,42 +6,9 @@ on:
       - master
 
 jobs:
+  terraform-setup:
+    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform/setup-composite-action.yml@main
+    
   terraform-plan:
-    name: Terraform Plan
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: Checkout Repo
-      uses: actions/checkout@v2
-
-    - name: Terraform Setup
-      uses: hashicorp/setup-terraform@v1
-
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-region: ${{ secrets.AWS_REGION }}
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
-    - name: Terraform Init
-      run: terraform init
-      env:
-        TF_ACTION_WORKING_DIR: '.'
-
-    - name: Terraform Validate
-      run: terraform validate 
-
-    - name: Terraform Plan
-      run: |
-        terraform plan \
-        && terraform output > outputs-plan
-      env:
-        TF_ACTION_WORKING_DIR: '.'
-
-    - name: Upload Output Plan
-      uses: actions/upload-artifact@v3
-      with:
-        name: output-plan
-        path: output-plan
-        retention-days: 1
+    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform/plan-composite-action.yml@main
+    
