@@ -39,7 +39,7 @@ jobs:
       env:
         TF_ACTION_WORKING_DIR: '.'
 
-    - name: 'Upload Artifact'
+    - name: Upload Output
       uses: actions/upload-artifact@v3
       with:
         name: outputs.json
