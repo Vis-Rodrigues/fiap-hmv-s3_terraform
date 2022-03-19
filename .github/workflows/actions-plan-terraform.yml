@@ -7,8 +7,8 @@ on:
 
 jobs:
   terraform-setup:
-    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform/setup-composite-action.yml@main
+    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-setup-composite-action.yml@main
     
   terraform-plan:
-    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform/plan-composite-action.yml@main
+    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-plan-composite-action.yml@main
     
