@@ -38,6 +38,15 @@ jobs:
         TF_ACTION_WORKING_DIR: '.'
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve
+      run: |
+        terraform apply -auto-approve \
+        && terraform output > outputs-apply
       env:
         TF_ACTION_WORKING_DIR: '.'
+    
+    - name: Upload Output Apply
+      uses: actions/upload-artifact@v3
+      with:
+        name: outputs-apply
+        path: outputs-apply
+        retention-days: 3

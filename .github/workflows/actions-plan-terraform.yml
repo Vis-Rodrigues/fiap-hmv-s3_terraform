@@ -34,14 +34,14 @@ jobs:
 
     - name: Terraform Plan
       run: |
-        terraform plan -input=false -no-color -out=outputs.json \
-        && terraform show -json -no-color outputs.json
+        terraform plan \
+        && terraform output > outputs-plan
       env:
         TF_ACTION_WORKING_DIR: '.'
 
-    - name: Upload Output
+    - name: Upload Output Plan
       uses: actions/upload-artifact@v3
       with:
-        name: outputs.json
-        path: outputs.json
-        retention-days: 3
+        name: output-plan
+        path: output-plan
+        retention-days: 1
