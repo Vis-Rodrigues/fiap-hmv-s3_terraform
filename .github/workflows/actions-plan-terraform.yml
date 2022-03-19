@@ -8,10 +8,6 @@ on:
 jobs:
   terraform-setup:
     uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-setup-composite-action.yml@main
-    secrets:
-      aws-region: ${{ secrets.AWS_REGION }}
-      aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
   terraform-plan:
     needs: terraform-setup
