@@ -1,11 +1,11 @@
-name: Terraform Plan
+name: Actions Terraform
 
 on:
   push:
 
 jobs:
   
-  terraform-plan:
+  terraform:
     uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-plan-composite-action.yml@main
     secrets:
       aws-region: ${{ secrets.AWS_REGION }}
