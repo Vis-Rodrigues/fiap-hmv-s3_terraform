@@ -2,7 +2,7 @@
 [![Generic badge](https://img.shields.io/badge/Infra-Terraform-purple.svg)](https://www.terraform.io/)
 [![Generic badge](https://img.shields.io/badge/Provider-AWS-orange.svg)](https://aws.amazon.com/pt/)
 
-Provisionar na AWS um API Gateway para expor as rotas dos serviços
+Provisionar via terraform um S3 Bucket na AWS para armazenar o front do serviço HMV.
 
 ## Como executar
 
