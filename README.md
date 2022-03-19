@@ -1,7 +1,8 @@
 # S3 Terraform
-[![Deploy S3 AWS](https://github.com/Vis-Rodrigues/fiap-hmv-s3_terraform/actions/workflows/actions.yml/badge.svg)](https://github.com/Vis-Rodrigues/fiap-hmv-s3_terraform/actions/workflows/actions.yml)
+[![Generic badge](https://img.shields.io/badge/Infra-Terraform-purple.svg)](https://www.terraform.io/)
+[![Generic badge](https://img.shields.io/badge/Provider-AWS-orange.svg)](https://aws.amazon.com/pt/)
 
-Provisionar na AWS um API Gateway para expor as rotas dos serviços
+Provisionar via terraform um S3 Bucket na AWS para armazenar o front do serviço HMV.
 
 ## Como executar
 
