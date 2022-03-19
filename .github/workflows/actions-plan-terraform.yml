@@ -35,7 +35,7 @@ jobs:
     - name: Terraform Plan
       run: |
         terraform plan -input=false -no-color -out=outputs.json \
-        && terraform show -no-color outputs.json
+        && terraform show -json -no-color outputs.json
       env:
         TF_ACTION_WORKING_DIR: '.'
 
