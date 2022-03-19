@@ -1,4 +1,7 @@
 # S3 Terraform
+[![Generic badge](https://img.shields.io/badge/Infra-Terraform-purple.svg)](https://www.terraform.io/)
+[![Generic badge](https://img.shields.io/badge/Provider-AWS-orange.svg)](https://aws.amazon.com/pt/)
+
 [![Deploy S3 AWS](https://github.com/Vis-Rodrigues/fiap-hmv-s3_terraform/actions/workflows/actions.yml/badge.svg)](https://github.com/Vis-Rodrigues/fiap-hmv-s3_terraform/actions/workflows/actions.yml)
 
 Provisionar na AWS um API Gateway para expor as rotas dos serviços
