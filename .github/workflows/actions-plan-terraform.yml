@@ -8,8 +8,8 @@ on:
 jobs:
   terraform-setup:
     uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-setup-composite-action.yml@main
-    env:
-      aws-region: ${{ secrets.AWS_REGION }}
+    with:
+      aws-region: 'us-east-1'
       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
