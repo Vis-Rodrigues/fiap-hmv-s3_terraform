@@ -1,4 +1,4 @@
-name: Actions Terraform
+name: Terraform Actions
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 jobs:
   
   terraform:
-    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-plan-composite-action.yml@main
+    uses: Vis-Rodrigues/workflow-template/.github/workflows/terraform-action.yml@main
     secrets:
       aws-region: ${{ secrets.AWS_REGION }}
       aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
